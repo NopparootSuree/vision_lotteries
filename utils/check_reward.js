@@ -18,14 +18,9 @@ const check_reward = async (lottery_number) => {
             }
         );
 
-        console.log(typeof lotteries);
-        console.log(lotteries);
-
         let list_lotteries_number = []
 
         lotteries.forEach((eachLotterie) => {
-            console.log("reward no :", eachLotterie.reward_number)
-            console.log("lottery_no",eachLotterie.lottery_number)
             list_lotteries_number.push({lottery_number: eachLotterie.lottery_number, reward_number: eachLotterie.reward_number})
         });
 
