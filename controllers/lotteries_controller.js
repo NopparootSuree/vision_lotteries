@@ -4,7 +4,7 @@ const Lotterie = db.lottery
 
 const addLotterie = async (req, res) => {
     const schema = Joi.object({
-        lottery_number: Joi.number().integer().min(100000).max(999999).required(),
+        lottery_number: Joi.number().integer().required(),
         reward_number: Joi.number().integer().min(1).max(7).required()
     });
 

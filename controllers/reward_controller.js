@@ -13,8 +13,9 @@ const reward = async (req, res) => {
         const [result] = await client.textDetection(request);
         const description = result.textAnnotations[0].description;
         const lotteryNumber = description.match(/[0-9]{6}/);
-        let test = checkReward(lotteryNumber[0])
-        res.json({ result: test });
+        console.log(lotteryNumber[0]);
+        let response = await checkReward(lotteryNumber[0])
+        res.json({ result: response });
     } catch (error) {
         console.error('Error processing image:', error);
         res.status(500).json({ error: 'Error processing image' });
