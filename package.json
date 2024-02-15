@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "node configs/generate-google-api-credentials.js && nodemon -L server.js"
+    "dev": "node configs/generate-google-api-credentials.js && nodemon -L server.js",
+    "start": "node configs/generate-google-api-credentials.js && node server.js"
   },
   "keywords": [],
   "author": "",

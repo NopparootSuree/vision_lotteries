@@ -4,8 +4,8 @@ const JWTMiddleware = require('../middlewares/jwt')
 
 const jwtMiddleware = JWTMiddleware(process.env.JWT_SECRET_KEY);
 
-router.post('/lotterie', jwtMiddleware, controller.addLotterie)
-router.get('/lotteries', jwtMiddleware, controller.listLotteries)
-router.delete('/lotterie/:id', jwtMiddleware, controller.deleteLotterie)
+router.post('/lotterie', controller.addLotterie)
+router.get('/lotteries', controller.listLotteries)
+router.delete('/lotterie/:id', controller.deleteLotterie)
 
 module.exports = router
